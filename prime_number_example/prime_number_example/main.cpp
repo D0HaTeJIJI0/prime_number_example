@@ -4,7 +4,7 @@ using namespace std;
 bool isNumberPrime(int number)
 {
 	bool primeFlag = true;
-	for (int i = 3; i * i <= number; i++)
+	for (int i = 2; i * i <= number; i++)
 	{
 		if (number % i == 0)
 		{
