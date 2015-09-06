@@ -15,17 +15,25 @@ bool isNumberPrime(int number)
 	return primeFlag;
 }
 
-int main()
+void assert(bool test, int number)
 {
-    int n;
-    cin >> n;
-    if (isNumberPrime(n))
-    {
-	    cout << n << " is prime" << endl;
-    }
+	bool result = isNumberPrime(number);
+	if (test == result)
+	{
+		cout << "OK" << endl;
+	}
 	else
 	{
-		cout << n << " is composite" << endl;
+		cout << "FAIL; " << number << endl;
 	}
+}
+
+int main()
+{
+	assert(true, 11);
+	assert(true, 37);
+	assert(false, 27339979);
+	assert(true, 18181);
+	assert(false, 4);
 	return 0;
 }
