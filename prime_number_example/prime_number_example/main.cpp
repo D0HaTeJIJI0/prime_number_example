@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//Excess comment
 bool isNumberPrime(int number)
 {
 	bool primeFlag = true;
